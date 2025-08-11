@@ -4,7 +4,7 @@ require_once 'conexao.php';
 
 // Garante que o usuario esteja logado
 if (!isset($_SESSION['id_usuario'])){
-    echo "<script>alert('Acesso Negado!'); window.location.href='login.php';</script>";
+    echo "<script>alert('Acesso Negado!'); window.location.href='index.php';</script>";
     exit();
 }
 
@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         if($stmt->execute()){
             session_destroy();
-            echo "<script>alert('Senha alterada com sucesso! Faça login novamente.'); window.location.href='login.php';</script>";
+            echo "<script>alert('Senha alterada com sucesso! Faça login novamente.'); window.location.href='index.php';</script>";
         } else {
             echo "<script>alert('Erro ao alterar a senha');</script>";
         }
@@ -73,6 +73,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         senha2.type = tipo;
     }
 </script>
-
+<adress><center>Ruan de Mello Vieira - Estudante de Desenvolvimento de Sistemas do senai</center></adress>
 </body>
 </html>
